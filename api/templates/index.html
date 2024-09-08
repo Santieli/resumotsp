@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+
+        .item {
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-detail {
+            margin-left: 20px;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+        }
+
+        .hw {
+            position: relative;
+            left: 55px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .vandalismo {
+            position: relative;
+            left: 70px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .dl {
+            position: relative;
+            left: 118px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .massivas {
+            position: relative;
+            left: 88px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .mini-massivas {
+            position: relative;
+            left: 49px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .oportunidade {
+            position: relative;
+            left: 12px;
+            width: 45px;
+            size: 100%;
+            text-align: center;
+        }
+
+        .box {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <title>Resumo TSP</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resumo TSP</h1>
+
+
+        <form action="/send-message" method="post"><br>
+
+            <div class="section">
+                <div class="section">
+                    <div class="title" id="title">Sites Fora: {{hora}} </div>
+                    <div class="item">
+                        <br><strong>Afetação (Grafana): </strong><input class="grafana" type="text" id="grafana"
+                            name="grafana">
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Regional TSP</div>
+                    <div class="item">
+                        <br><strong>Falhas de HW: </strong><input class="hw" type="number" id="hw" name="hw">
+                    </div>
+                    <div class="item">
+                        <br><strong>Vandalismo: </strong><input class="vandalismo" type="number" id="vandalismo"
+                            name="vandalismo">
+                    </div>
+                    <div class="item">
+                        <br><strong>DL(s): </strong><input class="dl" type="number" id="dl" name="dl">
+                    </div>
+                    <div class="item">
+                        <br><strong>Massivas: </strong><input class="massivas" type="number" id="massivas"
+                            name="massivas">
+                    </div>
+                    <div class="item">
+                        <br><strong>Mini-Massivas: </strong><input class="mini-massivas" type="number"
+                            id="mini-massivas" name="mini-massivas">
+                    </div>
+                    <div class="item">
+                        <br><strong>Oportunidade sites: </strong><input class="oportunidade" type="number"
+                            id="oportunidade" name="oportunidade">
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item-detail">
+                        <div class="section-title">ANF 11</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_11" name="dl_11" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_11" name="massiva_11" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_11" name="minimassiva_11" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        <div class="section-title">ANF 12</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_12" name="dl_12" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_12" name="massiva_12" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_12" name="minimassiva_12" cols="95"
+                            rows="10"></textarea><br><br>
+                        
+    
+                        <div class="section-title">ANF 13</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_13" name="dl_13" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_13" name="massiva_13" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_13" name="minimassiva_13" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        <div class="section-title">ANF 14</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_14" name="dl_14" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_14" name="massiva_14" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_14" name="minimassiva_14" cols="95"
+                            rows="10"></textarea><br><br>
+                        
+                        <div class="section-title">ANF 15</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_15" name="dl_15" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_15" name="massiva_15" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_15" name="minimassiva_15" cols="95"
+                            rows="10"></textarea><br><br>
+                        
+                        <div class="section-title">ANF 16</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_16" name="dl_16" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_16" name="massiva_16" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_16" name="minimassiva_16" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        <div class="section-title">ANF 17</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_17" name="dl_17" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_17" name="massiva_17" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_17" name="minimassiva_17" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        
+                        <div class="section-title">ANF 18</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_18" name="dl_18" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_18" name="massiva_18" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_18" name="minimassiva_18" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        <div class="section-title">ANF 19</div>
+                        <span class="item-title">DL(s):</span><br><br>
+                        <textarea class="box" id="dl_19" name="dl_19" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Massiva(s):</span><br><br>
+                        <textarea class="box" id="massiva_19" name="massiva_19" cols="95" rows="10"></textarea><br><br>
+                        <span class="item-title">Mini Massiva(s):</span><br><br>
+                        <textarea class="box" id="minimassiva_19" name="minimassiva_19" cols="95"
+                            rows="10"></textarea><br><br>
+
+                        <button  type="submit">Enviar Mensagem</button>
+                        <input type="button" value="Clear" onclick="eraseText();">
+
+        </form>
+        <script>
+
+            function eraseText() {
+                document.getElementById("dl_11").value = "";
+                document.getElementById("massiva_11").value = "";
+                document.getElementById("minimassiva_11").value = "";
+
+                document.getElementById("dl_12").value = "";
+                document.getElementById("massiva_12").value = "";
+                document.getElementById("minimassiva_12").value = "";
+
+                document.getElementById("dl_13").value = "";
+                document.getElementById("massiva_13").value = "";
+                document.getElementById("minimassiva_13").value = "";
+
+                document.getElementById("dl_14").value = "";
+                document.getElementById("massiva_14").value = "";
+                document.getElementById("minimassiva_14").value = "";
+
+                document.getElementById("dl_15").value = "";
+                document.getElementById("massiva_15").value = "";
+                document.getElementById("minimassiva_15").value = "";
+
+                document.getElementById("dl_16").value = "";
+                document.getElementById("massiva_16").value = "";
+                document.getElementById("minimassiva_16").value = "";
+
+                document.getElementById("dl_17").value = "";
+                document.getElementById("massiva_17").value = "";
+                document.getElementById("minimassiva_17").value = "";
+
+                document.getElementById("dl_18").value = "";
+                document.getElementById("massiva_18").value = "";
+                document.getElementById("minimassiva_18").value = "";
+
+                document.getElementById("dl_19").value = "";
+                document.getElementById("massiva_19").value = "";
+                document.getElementById("minimassiva_19").value = "";
+
+
+
+            }
+
+            // function funcao1() {
+            //     alert("Eu sou um alert!");
+            // }
+        </script>
+        <br>
+    </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
